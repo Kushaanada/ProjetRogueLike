@@ -1,0 +1,20 @@
+Attaque (ATK)
+
+    Commun : +1 à +20
+    Rare : +20 à +60
+    Épique : +60 à +130
+    Légendaire : +130 à +250
+
+Défense (DEF)
+
+    Commun : +1 à +10
+    Rare : +10 à +30
+    Épique : +30 à +70
+    Légendaire : +70 à +120
+
+Points de Vie (PV)
+
+    Commun : +5 à +30
+    Rare : +30 à +80
+    Épique : +80 à +200
+    Légendaire : +200 à +400
