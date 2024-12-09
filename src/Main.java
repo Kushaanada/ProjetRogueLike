@@ -10,8 +10,9 @@ public class Main {
         boolean pass;
         int nombreJoueursInt = 0;
         System.out.println("Liste des joueurs: \n");
+        // Création d'une collection de joueurs (vide)
+        Vector<Joueur> listeJoueurs = new Vector<Joueur>();
         do {
-            Vector<Joueur> listeJoueurs = new Vector<Joueur>();
             try { // Pour éviter de faire planter le programme si il a mal écrit le nombre
                 String nombreJoueurs = JOptionPane.showInputDialog(null, "Combien de joueur?", "", JOptionPane.QUESTION_MESSAGE);
                 if (nombreJoueurs == null) { // Si il clique sur Cancel, ça ferme le programme
@@ -31,14 +32,14 @@ public class Main {
            ClasseJoueur joueur = new ClasseJoueur(nom, classeJoueur);
            JOptionPane.showMessageDialog(null,"Enchanté, " + joueur.nom , "", JOptionPane.INFORMATION_MESSAGE);
            System.out.println(i + ": " + joueur.nom + "\nClasse: " + joueur.classeJoueur + "\n");
-        }
-        //Création d'une collection de joueurs
-        
-        //Création des Spells: Collection de spells vide
+           // Ajout du joueur créé dans la collection
+           listeJoueurs.add(joueur);
+        }        
+        // Création des Spells: Collection de spells vide
         Vector<Spell> listeSpells = new Vector<Spell>();
-        //Création des Spells: Ajout des spells créés dans une fonction externe dans la collection vide
+        // Création des Spells: Ajout des spells créés dans une fonction externe dans la collection vide
         creerSpells(listeSpells);
-        piocheSpells(listeSpells, null);
+        piocheSpells(listeSpells, listeJoueurs);
     }
     public static void creerSpells(Vector<Spell> listeSpells) {
         Random random = new Random();
@@ -67,6 +68,8 @@ public class Main {
         listeSpells = listSpells;
     }
     public static void creerArmes() {
+        Arme epeeBenizakura = new Arme("Épée Benizakura", 75, 0, "Une épée cybernétique qui recueille des données et apprend au fur et à mesure qu'elle se bat.", "Guerrier");
+        Arme lamesDuChaos = new Arme("Lames du Chaos", 140, 35, "Les lames légendaires qui furent utilisées par un Spartiate dieu de la guerre", "Guerrier");
         
     }
     public static void piocheSpells (Vector<Spell> listespells, Vector<Joueur> listeJoueurs) {
