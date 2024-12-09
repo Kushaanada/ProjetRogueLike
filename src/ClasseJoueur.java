@@ -19,6 +19,7 @@ public class ClasseJoueur extends Joueur{
                 this.reductionDegats = 5;    
                 this.critRate = 5;
                 ok = true;
+                this.classeJoueur = "Guerrier";
             } else if (classeJoueur.trim().toLowerCase().equals("mage") || classeJoueur.trim().toLowerCase().equals("2")) {
                 this.attaque = 25;
                 this.defense = 5;
@@ -26,6 +27,7 @@ public class ClasseJoueur extends Joueur{
                 this.reductionDegats = 0;    
                 this.critRate = 10;   
                 ok = true;
+                this.classeJoueur = "Mage";
             } else if (classeJoueur.trim().toLowerCase().contains("soutien") || classeJoueur.trim().toLowerCase().equals("3")) {
                 this.attaque = 10;
                 this.defense = 8;
@@ -33,6 +35,7 @@ public class ClasseJoueur extends Joueur{
                 this.reductionDegats = 0;    
                 this.critRate = 5;   
                 ok = true;
+                this.classeJoueur = "Soutien";
             } else if (classeJoueur.trim().toLowerCase().equals("tank") || classeJoueur.trim().toLowerCase().equals("4")) {
                 this.attaque = 10;
                 this.defense = 20;
@@ -40,6 +43,7 @@ public class ClasseJoueur extends Joueur{
                 this.reductionDegats = 10;    
                 this.critRate = 3; 
                 ok = true;  
+                this.classeJoueur = "Tank";
             } else {
                 JOptionPane.showMessageDialog(null, "Erreur lors du choix de vôtre classe.", "", JOptionPane.ERROR_MESSAGE);
                 ok = false;
