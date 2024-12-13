@@ -68,9 +68,8 @@ public class Main {
         listeSpells = listSpells;
     }
     public static void creerArmes() {
-        Arme epeeBenizakura = new Arme("Épée Benizakura", 75, 0, "Une épée cybernétique qui recueille des données et apprend au fur et à mesure qu'elle se bat.", "Guerrier");
-        Arme lamesDuChaos = new Arme("Lames du Chaos", 140, 35, "Les lames légendaires qui furent utilisées par un Spartiate dieu de la guerre", "Guerrier");
-        
+        Arme epeeBenizakura = new Arme("Épée Benizakura", 75, 0, "Une épée cybernétique qui recueille des données et apprend au fur et à mesure qu'elle se bat.", "Guerrier", false);
+        Arme lamesDuChaos = new Arme("Lames du Chaos", 140, 35, "Les lames légendaires qui furent utilisées par un Spartiate dieu de la guerre", "Guerrier", false);
     }
     public static void piocheSpells (Vector<Spell> listespells, Vector<Joueur> listeJoueurs) {
         Vector<Spell>listSpells = listespells;

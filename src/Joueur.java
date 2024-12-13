@@ -8,6 +8,7 @@ public class Joueur {
     String nom; // Nom du joueur
     int creditsRadiants; // Monnaie du jeu
     String classeJoueur;
+    Inventaire inventaire;
     public Joueur (String nom, String classeJoueur) {
         this.nom = nom;
         this.classeJoueur = classeJoueur;
